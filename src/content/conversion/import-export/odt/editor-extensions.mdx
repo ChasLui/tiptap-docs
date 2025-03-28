@@ -112,11 +112,11 @@ editor
 
 #### Arguments
 
-| Name       | Type       | Default     | Options       | Description                                                                                                                                                                   |
-|------------|------------|-------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `file`     | `File`     | `undefined` | Any file      | The file to import                                                                                                                                                            |
-| `format`   | `string`   | `undefined` | `gfm`         | Not relevant for the ODT file type                                                                                                                                            |
-| `onImport` | `Function` | `undefined` | `fn(context)` | A callback used to customize the import behavior. The context argument includes information about the content, errors and a `setEditorContent` function to modify the content |
+| Name       | Type       | Default     | Options       | Description                                                                                                                                                                           |
+|------------|------------|-------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `file`     | `File`     | `undefined` | Any file      | File to import. Add the ODT MIME type: `application/vnd.oasis.opendocument.text`                                                                                                              |
+| `format`   | `string`   | `undefined` | `gfm`         | Not relevant for the ODT file type                                                                                                                                                    |
+| `onImport` | `Function` | `undefined` | `fn(context)` | A callback used to customize the import behavior. The context argument includes information about the content, errors and a `setEditorContent` function to modify the content         |
 
 ## Editor ODT Export
 To use the convert extension, you need to install the `@tiptap-pro/extension-export` package:

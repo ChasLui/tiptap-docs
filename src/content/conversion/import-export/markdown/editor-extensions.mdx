@@ -86,11 +86,11 @@ editor.chain().import({
 | `import`  | Import a file into the editor content |
 
 ### `import` arguments
-| Name       | Type       | Default     | Options           | Description                                                                                                               |
-| ---------- | ---------- | ----------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `file`     | `File`     | `undefined` | Any file          | The file to import                                                                                                        |
-| `format`   | `string`   | `undefined` | `gfm` (optional)  | If set to `gfm`, the conversion treats the input as GitHub Flavored Markdown                                              |
-| `onImport` | `Function` | `undefined` | `fn(context)`     | Callback to customize import. Receives a context with the Tiptap JSON `content`, any `error`, and `setEditorContent()`.   |
+| Name       | Type       | Default     | Options           | Description                                                                                                                         |
+| ---------- | ---------- | ----------- | ----------------- |-------------------------------------------------------------------------------------------------------------------------------------|
+| `file`     | `File`     | `undefined` | Any file          | The file to import. Add the md MIME type text/markdown                                                                                                        |
+| `format`   | `string`   | `undefined` | `gfm` (optional)  | If set to `gfm`, the conversion treats the input as GitHub Flavored Markdown                                                        |
+| `onImport` | `Function` | `undefined` | `fn(context)`     | Callback to customize import. Receives a context with the Tiptap JSON `content`, any `error`, and `setEditorContent()`.             |
 
 ## Editor Markdown Export
 

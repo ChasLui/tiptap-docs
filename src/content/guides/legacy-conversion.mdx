@@ -94,7 +94,7 @@ editor
 ### Import options
 
 | Name                     | Type       | Default     | Description                                                                                                                                                                                     |
-| ------------------------ | ---------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|--------------------------|------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `appId`                  | `string`   | `undefined` | The convert app ID from the Convert settings page: [https://cloud.tiptap.dev/convert-settings](https://cloud.tiptap.dev/convert-settings)                                                       |
 | `token`                  | `string`   | `undefined` | The JWT token generated from your server via secret                                                                                                                                             |
 | `imageUploadCallbackUrl` | `string`   | `undefined` | The URL to upload images to, if not provided, images will be stripped from the document, [see more info](/collaboration/documents/conversion#image-uploading)                                   |
@@ -103,7 +103,7 @@ editor
 ### Commands
 
 | Name     | Description                   |
-| -------- | ----------------------------- |
+|----------|-------------------------------|
 | `import` | Import a file into the editor |
 
 #### `import`
@@ -111,8 +111,8 @@ editor
 ##### Arguments
 
 | Name       | Type       | Default     | Options       | Description                                                                                                                                                                   |
-| ---------- | ---------- | ----------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `file`     | `File`     | `undefined` | Any file      | The file to import                                                                                                                                                            |
+|------------|------------|-------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `file`     | `File`     | `undefined` | Any file      | The file to import. Make sure to add the MIME type                                                                                                                            |
 | `format`   | `string`   | `undefined` | `gfm`         | Is used for special cases where the format is not clear, for example markdown gfm                                                                                             |
 | `onImport` | `Function` | `undefined` | `fn(context)` | A callback used to customize the import behavior. The context argument includes information about the content, errors and a `setEditorContent` function to modify the content |
 
@@ -256,8 +256,8 @@ The `/import` endpoint enables the conversion of `docx`, `odt`, or `markdown` fi
 #### Body
 
 | Name                     | Type     | Description                                                                                                                  |
-| ------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `file`                   | `File`   | The file to convert                                                                                                          |
+|--------------------------|----------|------------------------------------------------------------------------------------------------------------------------------|
+| `file`                   | `File`   | The file to convert. Make sure to add the MIME type                                                                          |
 | `imageUploadCallbackUrl` | `string` | The callback endpoint to upload images that were encountered within the uploaded document, [see more info](#image-uploading) |
 
 #### Query parameters
